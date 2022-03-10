@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yoga project</title>
+	<style>
+		
+		*{
+			box-sizing: border-box;
+			font-family: sans-serif;
+			font-weight: bold;
+
+		}
+		body{
+		    margin: 0;
+		    padding: 0;
+			/*background-image: url('image/yogabg.jpeg');*/
+			/*height: 3000px;
+			background-repeat: no-repeat;*/
+		}
+		header::before{
+			content:"" ;
+			background: url('image/yogabg.jpeg') no-repeat center center/cover;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			opacity: 0.8;
+		}
+
+		/*header start*/
+		.flexbox-container{
+			display: flex;
+			flex-direction: row;
+		}
+		.box{
+			border: 3px solid transparent;
+		}
+		/*logo section*/
+		#leftheader{
+			display: inline-block;
+			position: absolute;
+			left: 20px;
+			top: 25px;
+			width: 100px;
+
+		}
+		.logopara{
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
+		}
+
+		/*nav section*/
+		#middleheader{
+			width: 33%;
+			display: block;
+			margin: 25px auto;
+		}
+	    .navbar{
+	    	overflow: auto;
+	    	display: flex;
+	    	flex-direction: row;
+	    }
+	    .navbar li{
+	        display: inline;
+		}
+	     li a{
+	    	text-decoration: none;
+	    	list-style: none;
+	    	padding: 4px 10px ;
+	    	margin: 4px;
+	    	display: block;
+	    	text-align: center;
+	    	font-size: 20px;
+	    	color: black;
+			text-shadow: 1px 1px white;	    	
+	    }
+	    li a:hover{
+	    	color:silver ;
+	    	/*background-color: pink;*/
+	    }
+	     li a.active{
+	    	border-bottom:2px solid skyblue;
+	    }
+
+	    /*button section*/
+		#rightheader{
+			display: inline-block;
+			position:absolute;
+			top: 25px;
+			right: 20px;
+
+		}
+		.button{
+			margin: 4px;
+			padding: 4px;
+			border-radius: 10px;
+			border:2px solid silver;
+		}
+		.button:hover{
+			background: lightgrey;
+			cursor: pointer;
+			font-size: 14px;
+		}
+		.button:Active{
+			background:skyblue;
+		}
+		/*header closed*/
+
+
+
+		/*form section*/
+		.container{
+			border:1px ridge white;
+			border-radius: 20px;
+			display: block;
+			width: 800px;
+			height: 420px;
+			margin: 200px auto;
+			text-align: center;
+			background:black;
+			opacity: 0.9;
+		}
+
+		form{
+			margin:10px; 
+		}
+		.join{
+			color: white;
+		}
+		.input{
+			padding:  10px;
+			margin: 10px;
+			width:300px;
+			font-size: 15px;
+		}
+		/*form close*/
+
+	</style>
+</head>
+
+<body>
+	<header class="flexbox-container">
+		<div class="box" id="leftheader"> 
+			<img src="image/yogalogo.svg">
+			<p class="logopara">Himshikha yoga's class</p>
+		</div>
+		<div class="box" id="middleheader">
+			<nav class="navbar">
+					<li><a class="active" href="">Home</a></li>
+					<li><a href="">Aboutus</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">Picture</a></li>
+			</nav>
+		</div>
+		<div class="box" id="rightheader">
+		<button class="button">Call now</button>
+		<button class="button">Email us</button> 
+		</div>
+	</header>
+
+
+	<div class="container">
+		<form action="" method="">
+			<div >
+				<h1 class="join">Join the best yoga's class of katari now</h1>
+			</div>
+
+			<div >
+			<input class="input"
+			type="text" name="name" placeholder="Enter your name" required></div>
+
+			<div >
+			<input class="input"
+			type="text" name="address" placeholder="Enter your address" required></div>
+
+			<div >
+				<input class="input"
+				type="number" name="number" placeholder="Enter your phonenumber" required>
+			</div>
+
+			<div >
+				<input class="input"  type="Email" name="Email" placeholder="Enter your email" required>
+			</div>
+
+			<div >
+				<input class="button" type="submit" name="submit">
+		
+				<input  class="button" type="reset" name="reset">
+			</div>
+		</form>
+	</div>
+
+
+</body>
+</html>
